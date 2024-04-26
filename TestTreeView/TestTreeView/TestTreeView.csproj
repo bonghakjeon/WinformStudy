@@ -53,11 +53,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckBoxTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBoxTreeView.Designer.cs">
+      <DependentUpon>CheckBoxTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxTreeView2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBoxTreeView2.Designer.cs">
+      <DependentUpon>CheckBoxTreeView2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewTreeView.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +82,12 @@
     <Compile Include="TreeViewForm.Designer.cs">
       <DependentUpon>TreeViewForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CheckBoxTreeView.resx">
+      <DependentUpon>CheckBoxTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBoxTreeView2.resx">
+      <DependentUpon>CheckBoxTreeView2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
