@@ -61,28 +61,28 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(603, 423);
-            this.splitContainer1.SplitterDistance = 106;
+            this.splitContainer1.Size = new System.Drawing.Size(703, 390);
+            this.splitContainer1.SplitterDistance = 97;
             this.splitContainer1.TabIndex = 1;
             // 
             // crop
             // 
             this.crop.Enabled = false;
-            this.crop.Location = new System.Drawing.Point(125, 13);
+            this.crop.Location = new System.Drawing.Point(146, 12);
             this.crop.Name = "crop";
-            this.crop.Size = new System.Drawing.Size(83, 38);
+            this.crop.Size = new System.Drawing.Size(97, 35);
             this.crop.TabIndex = 1;
-            this.crop.Text = "Crop Selected Area";
+            this.crop.Text = "이미지 편집";
             this.crop.UseVisualStyleBackColor = true;
             this.crop.Click += new System.EventHandler(this.crop_Click);
             // 
             // selectIm
             // 
-            this.selectIm.Location = new System.Drawing.Point(12, 12);
+            this.selectIm.Location = new System.Drawing.Point(14, 11);
             this.selectIm.Name = "selectIm";
-            this.selectIm.Size = new System.Drawing.Size(75, 39);
+            this.selectIm.Size = new System.Drawing.Size(87, 36);
             this.selectIm.TabIndex = 0;
-            this.selectIm.Text = "Select Image";
+            this.selectIm.Text = "파일 선택";
             this.selectIm.UseVisualStyleBackColor = true;
             this.selectIm.Click += new System.EventHandler(this.selectIm_Click);
             // 
@@ -99,8 +99,9 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.pictureBox2);
-            this.splitContainer2.Size = new System.Drawing.Size(603, 313);
-            this.splitContainer2.SplitterDistance = 403;
+            this.splitContainer2.Size = new System.Drawing.Size(703, 289);
+            this.splitContainer2.SplitterDistance = 469;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
             // 
             // pictureBox1
@@ -108,9 +109,9 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(403, 313);
+            this.pictureBox1.Size = new System.Drawing.Size(469, 289);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -121,17 +122,17 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(7);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(196, 313);
+            this.pictureBox2.Size = new System.Drawing.Size(229, 289);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 423);
+            this.ClientSize = new System.Drawing.Size(703, 390);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
