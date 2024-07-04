@@ -169,5 +169,80 @@ namespace PictureBox_Crop_Image
 
             }
         }
+
+        private void btnBlackConvert_Click(object sender, EventArgs e)
+        {
+            // bool result = true;
+            int average = 0;                 // RGB 색상값 평균
+            Color orgColor = Color.White;    // 특정 픽셀의 기존 RGB 색상
+            Color grayColor = Color.Black;   // 특정 픽셀의 흑백 전환 RGB 색상
+
+            try
+            {
+                pictureBox1.Refresh();
+                pictureBox2.Refresh();
+
+                // 테스트 기능 - 흑백 전환 
+                // 1. 흑백 전환할 원본 이미지(OrgImage) 불러오기
+                // EditImage = OrgImage;
+                Bitmap blackConvertBmp = pictureBox1.Image as Bitmap;
+                // BlackConvertBmp = OrgImage as Bitmap;
+
+                // 2. for문 돌면서 이미지 흑백 전환 처리 
+                // x - 흑백 전환할 비트맵 객체 blackConvertBmp의 너비(Width)
+                // y - 흑백 전환할 비트맵 객체 blackConvertBmp의 높이(Height)
+                for(int x = 0; x < blackConvertBmp.Width; x++)
+                {
+                    for(int y = 0; y < blackConvertBmp.Height; y++)
+                    {
+                        // 3. 흑백 전환할 비트맵 객체 blackConvertBmp에 존재하는 특정 픽셀의 기존 RGB 색상을 가져오기
+                        orgColor = blackConvertBmp.GetPixel(x, y);
+                        average = (orgColor.R + orgColor.G + orgColor.B) / 3;   // orgColor의 RGB 색상값 평균 구하기 
+
+                        // 4. 흑백 전환 RGB 색상 가져오기
+                        // 메서드 FromArgb 호출해서 RGB 색상을 흑백으로 바꾸는 수식 적용
+                        grayColor = Color.FromArgb(average, average, average);
+
+                        // 5. 흑백 전환할 비트맵 객체 blackConvertBmp의 특정 픽셀의 RGB 색상을 흑백으로 설정 
+                        blackConvertBmp.SetPixel(x, y, grayColor);
+                    }
+                }
+
+                // 6. 이진화 처리 
+                // BinaryConvert(ref blackConvertBmp);
+                // EditImage = blackConvertBmp;
+
+                // 7. 흑백 전환 + 이진화 처리 완료한 비트맵 객체 blackConvertBmp를 원본 이미지 pictureBoxEditImage의 Image 속성에 할당 
+                //pictureBoxOrgImage.Image = OrgImage;
+                pictureBox2.Image = blackConvertBmp;
+
+                this.Activate();   // 메시지 박스 종료(TaskDialog.Show)후 부모 폼(ImageForm.cs) 다시 활성화
+
+
+                // TODO : 이미지 흑백 전환 기능 구현 (2024.07.04 jbh)
+                // MS 공식 문서
+                // GetPixel 참고 URL - http://msdn.microsoft.com/ko-kr/library/system.drawing.bitmap.getpixel(v=vs.110).aspx 
+                // SetPixel 참고 URL - http://msdn.microsoft.com/ko-kr/library/system.drawing.bitmap.setpixel(v=vs.110).aspx 
+                // FromArgb 참고 URL - http://msdn.microsoft.com/en-us/library/cce5h557(v=vs.110).aspx 
+
+                // 블로그 문서 
+                // 참고 URL - https://tctt.tistory.com/129
+                // 참고 2 URL - https://blog.naver.com/nersion/140141133683
+                // 참고 3 URL - https://blog.naver.com/PostView.naver?blogId=kgg1959&logNo=30182499708
+                // 참고 4 URL - https://son10001.blogspot.com/2014/04/blog-post_14.html
+
+                // ChatGPT 문서
+                // 참고 URL - https://chatgpt.com/c/772919c6-4936-4b8d-b796-0a4b4d02e6ef
+
+
+
+
+                // DisplaySetting(RevitBoxHelper.TypeOfBlackConvert, OrgImageFilePath);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }

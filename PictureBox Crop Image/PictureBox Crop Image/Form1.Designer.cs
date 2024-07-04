@@ -34,6 +34,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnBlackConvert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnBlackConvert);
             this.splitContainer1.Panel1.Controls.Add(this.crop);
             this.splitContainer1.Panel1.Controls.Add(this.selectIm);
             // 
@@ -130,6 +132,16 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // btnBlackConvert
+            // 
+            this.btnBlackConvert.Location = new System.Drawing.Point(303, 13);
+            this.btnBlackConvert.Name = "btnBlackConvert";
+            this.btnBlackConvert.Size = new System.Drawing.Size(93, 34);
+            this.btnBlackConvert.TabIndex = 2;
+            this.btnBlackConvert.Text = "흑백 전환";
+            this.btnBlackConvert.UseVisualStyleBackColor = true;
+            this.btnBlackConvert.Click += new System.EventHandler(this.btnBlackConvert_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -160,6 +172,7 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnBlackConvert;
     }
 }
 
