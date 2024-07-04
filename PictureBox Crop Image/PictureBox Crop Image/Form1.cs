@@ -131,7 +131,7 @@ namespace PictureBox_Crop_Image
         {
             try
             {
-                DialogResult dialogResult = MessageBox.Show("해당 이미지 자르기 진행할까요?", "이미지 편집", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("해당 이미지 자르기 진행할까요?", "이미지 자르기", MessageBoxButtons.YesNo);
 
                 if(DialogResult.Yes == dialogResult)
                 {
@@ -145,11 +145,11 @@ namespace PictureBox_Crop_Image
                     g.InterpolationMode = InterpolationMode.HighQualityBicubic;
 
                     //Draw the image on the Graphics object with the new dimesions
-                    //g.DrawImage(sourceBitmap, new Rectangle(0, 0, pictureBox2.Width, pictureBox2.Height), rectCropArea, GraphicsUnit.Pixel);
+                    // g.DrawImage(sourceBitmap, new Rectangle(0, 0, pictureBox2.Width, pictureBox2.Height), rectCropArea, GraphicsUnit.Pixel);
                     g.DrawImage(sourceBitmap, new Rectangle(0, 0, rectCropArea.Width, rectCropArea.Height), rectCropArea, GraphicsUnit.Pixel);
                     sourceBitmap.Dispose();
                     crop.Enabled = false;
-                    var path = Environment.CurrentDirectory.ToString();
+                    // var path = Environment.CurrentDirectory.ToString();
 
                     pictureBox1.Refresh();
 
